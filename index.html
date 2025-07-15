@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planify Dash</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div id="menu">
+
+<div id="volumeWrapper" style="margin-bottom: 20px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+  <label for="volumeControl" style="color: white; font-family: sans-serif; font-size: 1rem;">🎚️ Volume</label>
+  <input type="range" id="volumeControl" min="0" max="100" value="50" style="width: 200px;" />
+</div>
+
+    <h1>Planify Dash</h1>
+    
+<label for="speedSelect" style="color:white; font-family:sans-serif;">Vitesse :</label>
+<select id="speedSelect">
+  <option value="normal">Normal</option>
+  <option value="slow">Lente</option>
+  <option value="fast">Rapide</option>
+</select>
+
+<br><br><button onclick="startGame()">Jouer</button>
+  </div>
+  
+<div id="hud" style="display: none; position: absolute; top: 10px; left: 10px; color: #7CFC00; font-family: monospace;">
+  <div id="highScoreLive">High Score: 0</div>
+  <div id="scoreLive">Score: 0</div>
+</div>
+<canvas id="gameCanvas"></canvas>
+
+  <div id="endScreen" style="display: none;"><h2 id="scoreDisplay"></h2>
+    <h2>Fin du niveau !</h2>
+    <button onclick="restartGame()">Rejouer</button>
+  </div>
+  <script src="assets/js/game.js"></script>
+
+<div id="deathMenu" style="display: none; flex-direction: column; align-items: center; justify-content: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: black; color: white; font-family: sans-serif;">
+  <p id="finalScore" style="font-size: 1.2rem;">Score : 0</p>
+  <p style="font-size: 1.5rem; margin-bottom: 1rem;">Fin du niveau !</p>
+  <button onclick="startGame()" style="margin-bottom: 10px;">Rejouer</button>
+  <button id="backToMenuBtn">Retour au menu</button>
+</div>
+
+</body>
+</html>

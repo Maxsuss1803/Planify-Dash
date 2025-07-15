@@ -1,0 +1,28 @@
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: black;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+}
+#menu, #endScreen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: none;
+  background: cyan;
+  color: black;
+  box-shadow: 0 0 10px cyan, 0 0 20px cyan;
+  cursor: pointer;
+}
+canvas {
+  display: none;
+  background: linear-gradient(to bottom, #111, #222);
+}
